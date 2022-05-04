@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fetch API Sandbox</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <button id="getText">Get text</button>
     <button id="getUser">Get JSON</button>
     <button id="getPosts">Get posts</button>
+    <hr>
     <div id="textContainer"></div>
+    <form id="addPost">
+       <div><input id="postTitle" type="text" placeholder="Title"></div>
+       <div><textarea id="postBody" placeholder="Body"></textarea></div>
+       <div><input  type="submit" value="Submit"></div>
+
+    </form>
 
 
     <script src="main.js"></script>

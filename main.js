@@ -53,17 +53,34 @@ getPosts.addEventListener('click', ()=> {
         let output = `<h2>Posts</h2>`
         data.forEach((posts)=>{
             output += `
-            <ul>
-            <li>ID: ${posts.id} </li>
-            <li>Title: ${posts.title} </li>
-            <li>Body: ${posts.body} </li>
-            </ul>
+            <div>
+            <h3>Title: ${posts.title} </h3>
+            <p>Body: ${posts.body} </p>
+            </div>
             `;
         })
         document.getElementById('textContainer').innerHTML = output;
     })
+})
 
 
+const addPost = document.getElementById('addPost')
+addPost.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const title = document.getElementById('postTitle').value;
+    const body = document.getElementById('postBody').value;
 
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method:'POST',
+        headers:{
+            'Accept': 'application/json, text/plain, */*',
+            'Content-type':'application/json'
+        },
+        body: JSON.stringify({title:title, body:body})
+        })
+        .then((resp) => resp.json())
+        .then((data) =>
+            console.log(data)
+        )
 
 })
