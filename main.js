@@ -43,3 +43,27 @@ getUser.addEventListener('click', () =>{
      document.getElementById('textContainer').innerHTML = output;
  })
 });
+
+const getPosts = document.getElementById('getPosts');
+
+getPosts.addEventListener('click', ()=> {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((resp) => resp.json())
+    .then((data) => {
+        let output = `<h2>Posts</h2>`
+        data.forEach((posts)=>{
+            output += `
+            <ul>
+            <li>ID: ${posts.id} </li>
+            <li>Title: ${posts.title} </li>
+            <li>Body: ${posts.body} </li>
+            </ul>
+            `;
+        })
+        document.getElementById('textContainer').innerHTML = output;
+    })
+
+
+
+
+})
