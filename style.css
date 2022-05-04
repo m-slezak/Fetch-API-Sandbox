@@ -1,3 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 body{
     background: #D9F9A5;
+    box-sizing:border-box;
+}
+
+h1{
+    font-family: 'Koulen', cursive;
+    letter-spacing: 3px;
+    font-size: 50px;
+    color: #5c6bdd;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Koulen', cursive;
+    letter-spacing: 3px;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+}
+h3{
+    font-family: 'Koulen', cursive;
+    letter-spacing: 3px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+.buttonContainer{
+    display:flex;
+    justify-content: center;
+}
+
+.button-item{
+    width: 120px;
+    height: 60px;
+    margin: 20px;
+    font-size: 20px;
+    border: 2px solid black;
+    font-family: 'Koulen', cursive;
+    letter-spacing: 3px;
+
+}
+#submit{
+    color: rgba(255, 255, 255, 0,4);
+}
+#submit:hover{
+    color:rgba(255, 255, 255, 1);
+}
+
+#getText{
+    color: rgba(255, 255, 255, 0,4);
+    background-color: #06aed5;
+}
+
+#getText:hover{
+    color:rgba(255, 255, 255, 1);
+    background-color: #06aed5;
+
+}
+
+#getUser{
+    color: rgba(255, 255, 255, 0,4);
+    background-color: #8390fa;
+}
+
+#getUser:hover{
+    color:rgba(255, 255, 255, 1);
+    background-color: #8390fa;
+
+}
+
+#getPosts{
+    color: rgba(255, 255, 255, 0,4);
+    background-color: #fac748;
+}
+
+#getPosts:hover{
+    color:rgba(255, 255, 255, 1);
+    background-color: #fac748;
+
+}
+#submit{
+    color:rgba(255, 255, 255, 0,4);
+    background-color: #bfdbf7;
+}
+#submit:hover{
+    color:rgba(255, 255, 255, 1);
+    background-color: #bfdbf7;
+}
+
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+#postTitle{
+    min-width: 600px;
+}
+
+#postBody{
+    min-width: 600px;
+    min-height: 300px;
+
+}
+
+.usersList{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.list-element{
+    font-size: 20px;
+    margin: 10px;
+}
+
+
+
+#textContainer{
+    text-align: center;
+}
+
+
+#postBody, #postTitle{
+    font-size: 20px;
 }

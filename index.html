@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="getText">Get text</button>
-    <button id="getUser">Get JSON</button>
-    <button id="getPosts">Get posts</button>
+    <h1>Fetch API Sandbox</h1>
+    <div class="buttonContainer">
+        <button class="button-item" id="getText">Get text</button>
+        <button class = "button-item" id="getUser">Get JSON</button>
+        <button class = "button-item" id="getPosts">Get posts</button>
+    </div>
     <hr>
     <div id="textContainer"></div>
-    <form id="addPost">
+    <form id="addPost" class="formContainer">
        <div><input id="postTitle" type="text" placeholder="Title"></div>
        <div><textarea id="postBody" placeholder="Body"></textarea></div>
-       <div><input  type="submit" value="Submit"></div>
+       <div><input class="button-item" id="submit" type="submit" value="Submit"></div>
 
     </form>
 

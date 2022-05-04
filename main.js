@@ -20,6 +20,8 @@ button.addEventListener('click', () =>{
     .then((data) => {
         const textArea =document.getElementById('textContainer');
         textArea.innerHTML = data;
+        textArea.style.fontSize = '20px';
+        textArea.style.marginTop = '20px'
     })
     .catch((error)=>console.log('Error'))
 });
@@ -33,10 +35,10 @@ getUser.addEventListener('click', () =>{
      let output = `<h2>Users</h2>`
      data.forEach((user) => {
          output += `
-         <ul>
-         <li>ID: ${user.id} </li>
-         <li>Name: ${user.name} </li>
-         <li>Email: ${user.email} </li>
+         <ul class="usersList">
+         <li class="list-element">ID: ${user.id} </li>
+         <li class="list-element">Name: ${user.name} </li>
+         <li class="list-element">Email: ${user.email} </li>
          </ul>
          `
      })
@@ -53,7 +55,7 @@ getPosts.addEventListener('click', ()=> {
         let output = `<h2>Posts</h2>`
         data.forEach((posts)=>{
             output += `
-            <div>
+            <div class="postList">
             <h3>Title: ${posts.title} </h3>
             <p>Body: ${posts.body} </p>
             </div>
