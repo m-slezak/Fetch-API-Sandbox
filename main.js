@@ -86,3 +86,20 @@ addPost.addEventListener('submit', (e) => {
         )
 
 })
+
+const getPhotos = document.getElementById('getPhotos');
+
+getPhotos.addEventListener('click', () =>{
+
+    fetch('https://jsonplaceholder.typicode.com/photos')
+    .then((resp) => resp.json())
+    .then((data) => {
+        let photos = `<h3>Photos</h3>`;
+         data.forEach((photo) => {
+             photos += `
+             <div><img src='${photo.url}'></div>
+             `
+         })
+         document.getElementById('textContainer').innerHTML = photos;
+    })
+})
