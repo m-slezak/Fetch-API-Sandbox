@@ -94,7 +94,7 @@ getPhotos.addEventListener('click', () =>{
     fetch('https://jsonplaceholder.typicode.com/photos')
     .then((resp) => resp.json())
     .then((data) => {
-        let photos = `<h3>Photos</h3>`;
+        let photos = `<h2>Photos</h2>`;
          data.forEach((photo) => {
              photos += `
              <div><img src='${photo.url}'></div>
